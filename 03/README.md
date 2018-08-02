@@ -4,7 +4,7 @@
 
 **data** : data옵션에 주어진 모든 속성들은 Vue 인스턴스 내부에서 직접 이용되지 않고 Vue 인스턴스와 Data 옵션에 주어진 객체 사이에 프록시를 두어 처리.
 
-ex03-01.html
+[ex03-01.html](https://cho-i.github.io/Vue-Quick-Start/03/ex03-01.html)
 
 data 옵션은 Vue 인스턴스가 관찰하는 데이터 객체를 의미하므로 변경 사항은 즉시 감지. Vue 인스턴스에 의해 프록시 처리되어 vm.name과 같이 사용하 수 있음. 직접 data 옵션을 통해 접근하고 싶다면 `vm.$data.nam` 과같이 접근할 수 있음. 내장 옵션들은 모두 `$식별자`를 앞에 붙이고 있는데 이름 충돌을 피하기 위한 것.
 
@@ -16,7 +16,7 @@ data 옵션은 Vue 인스턴스가 관찰하는 데이터 객체를 의미하므
 
 **computed** : 지정한 값은 함수였지만 Vue 인스턴스는 프록시 처리하여 마치 속성처럼 취급.
 
-ex03-02.html
+[ex03-02.html](https://cho-i.github.io/Vue-Quick-Start/03/ex03-02.html)
 
 sum은 분명 함수. 하지만 `vmSum.sum`으로 속성 접근 방식을 사용했을 때 정상 실행됨. 이러한 이유로 계산된 속성(Computed Property)라고 함.
 
@@ -24,7 +24,7 @@ sum은 분명 함수. 하지만 `vmSum.sum`으로 속성 접근 방식을 사용
 
 등록된 메서드는 Vue 인스턴스를 이용해 직접 호출할 수도 있고, 디렉티브 표현식, 콧수염 표현식에서도 사용할 수 있음.
 
-ex03-03.html
+[ex03-03.html](https://cho-i.github.io/Vue-Quick-Start/03/ex03-03.html)
 
 메서드이기 때문에 3행과 같이 `sum()`으로 호출 구문 형식 사용.
 
