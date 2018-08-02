@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>vue</title>
+	<script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+</head>
+<body>
+	<div id="test">
+		{{name}}
+	</div>
+	<script type="text/javascript">
+		var model = {
+			name:"홍길동"
+		}
+		var vm = new Vue({
+		  el:'#test',
+		  data:model
+		});
+	</script>
+</body>
+</html>
