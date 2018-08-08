@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>vue</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+	<style>
+	html,body{margin:0;padding:0;}
+		#example{height:98vh;min-height:100%;padding:5px;}
+	</style>
+</head>
+<body>
+	<div id="example" v-on:contextmenu="ctxStop">
+		<a href="https://facebook.com" @click="confirmFB">페이스북</a>
+	</div>
+	<script type="text/javascript">
+		var vm = new Vue({
+			el:"#example",
+		    methods:{
+				ctxStop:function(e){
+					e.preventDefault();
+				},
+		        confirmFB:function(e){
+			        if(!confirm('fb 이동할까여?')){
+			            e.preventDefault();
+			        }
+				}
+		    }
+		});
+	</script>
+</body>
+</html>
