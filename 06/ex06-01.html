@@ -10,15 +10,18 @@
 	</style>
 </head>
 <body>
-	<div id="example">
-
+	<div id="app">
+		<hello-component></hello-component>
+		<hello-component></hello-component>
+		<hello-component></hello-component>
 	</div>
 	<script type="text/javascript">
-		var vm = new Vue({
-			el:"#example",
-		    data:{
-
-		    }
+		Vue.component('hello-component',{
+			template:'<div>hello world</div>'
+		})
+		Vue.config.devtools = true;
+		var v = new Vue({
+			el:"#app"
 		});
 	</script>
 </body>
