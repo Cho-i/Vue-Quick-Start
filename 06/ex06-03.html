@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>vue</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+	<style>
+
+	</style>
+</head>
+<body>
+	<template id="timeTemplate">
+		<div>
+			<span>{{nowTS}}</span>
+			<button v-on:click="timeClick">현재 시간</button>
+		</div>
+	</template>
+	<div id="app">
+		<time-component></time-component>
+		<time-component></time-component>
+	</div>
+	<script type="text/javascript">
+		Vue.component('time-component',{
+			template:'#timeTemplate',
+		    data: function(){
+				return {nowTS:0}
+				},
+		    methods:{
+				timeClick:function(e){
+					this.nowTS = (new Date()).getTime();
+				}
+		    }
+		})
+		Vue.config.devtools = true;
+		var v = new Vue({
+			el:"#app"
+		});
+	</script>
+</body>
+</html>

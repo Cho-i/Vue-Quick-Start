@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>vue</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+	<style>
+
+	</style>
+</head>
+<body>
+	<div id="app">
+		<select>
+			<option is="option-component"></option>
+			<option is="option-component"></option>
+		</select>
+	</div>
+	<script type="text/javascript">
+		Vue.component('option-component',{
+			template:'<option>hello</option>'
+		})
+		Vue.config.devtools = true;
+		var v = new Vue({
+			el:"#app"
+		});
+	</script>
+</body>
+</html>
