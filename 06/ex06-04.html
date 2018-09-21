@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>vue</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+	<style>
+		#list{width:400px;border:1px solid #000;border-collapse:collapse;}
+		#list td,#list th{border:1px solid #000;text-align:center;}
+		#list > thead > tr{color:yellow;background-color:pink;}
+	</style>
+</head>
+<body>
+	<template id="listTemplate">
+		<div>
+			<table id="list">
+				<thead>
+					<tr>
+						<th>번호</th>
+						<th>이름</th>
+						<th>전화번호</th>
+						<th>주소</th>
+					</tr>
+				</thead>
+				<tbody id="contacts">
+					<tr v-for="contact in contacts">
+						<td>{{contact.no}}</td>
+						<td>{{contact.name}}</td>
+						<td>{{contact.tel}}</td>
+						<td>{{contact.address}}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</template>
+	<div id="app">
+		<h1>예방접종</h1>
+		<hr>
+		<h3>1차 대상자:5월 1~3일</h3>
+		<contactlist-component :contacts="list1"></contactlist-component>
+		<h3>2차 대상자:5월 13 ~ 15일</h3>
+		<contactlist-component :contacts="list2"></contactlist-component>
+	</div>
+	<script type="text/javascript">
+		Vue.component('contactlist-component',{
+		  template:'#listTemplate',
+		  props:['contacts']
+		})
+		Vue.config.devtools = true;
+		var v = new Vue({
+			el:"#app",
+			data:{
+			  list1:[
+			    {"no":97,"name":"kalisa Rogers","tel":"010-1234-5678","address":"서울시"},
+				{"no":96,"name":"Jesse James","tel":"010-1234-5679","address":"서울시"},
+				{"no":95,"name":"Jennifer Walker","tel":"010-1234-5670","address":"서울시"}
+			  ],
+			  list2:[
+			    {"no":82,"name":"Zenon Howard","tel":"010-7896-5412","address":"서울시"},
+			    {"no":81,"name":"Kylie Allen","tel":"010-7896-5413","address":"서울시"}
+			  ]
+			}
+		});
+	</script>
+</body>
+</html>
