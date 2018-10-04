@@ -66,3 +66,35 @@ Vue 컴포넌트들이 부모 - 자식 관계로 형성되었을 때 각 컴포�
 vue 컴포넌트를 정의할 때 props라는 옵션을 작성하고 props명을 배열로 나열하면 됨.
 
 [ex06-04.html](https://cho-i.github.io/Vue-Quick-Start/06/ex06-04.html)
+
+- contacts라는 이름의 속성을 정의.
+
+
+- contactlist-component에 v-bind 디렉티브를 이용해 각각 list1, list2 배열 데이터를 전달.
+
+
+- contactlist-component는 전달받은 contacts 속성값을 이용해 v-for 디렉티브를 활용해 반복하며 렌더링함.
+
+컴포넌트를 잘 만들고 활용하면 반복되는 코드를 줄이고 재사용성을 크게 높일 수 있음.
+
+### 6.5.2 event를 이용한 정보 전달
+
+event를 이용해서 전달하는 방법은 사용자 정의 이벤트를 활용.
+
+자식 컴포넌트에서는 이벤트를 발신(emit)하고 부모 컴포넌트에서 v-on 디렉티브를 이용해 이벤트를 수신
+
+[ex06-05.html](https://cho-i.github.io/Vue-Quick-Start/06/ex06-05.html)
+
+- buttonInfo 속성을 정의하고 부모 컴포넌트로부터 값을 전달받으며 전달받은 값을 이용해 버튼 리스트를 생성.
+
+
+- 버튼을 만들 때마다 text 값을 찍어주고, data-lang 특성에 value 값을 바인딩.
+
+
+- 자식 컴포넌트를 사용하는 부모 컴포넌트는 buttons 속성과 msg 데이터 옵션을 포함하고 있음.
+- 데이터 옵션은 해당 컴포넌트 내에서만 사용하기 위해 정의.
+- buttons 속성은 vm Vue 인스턴스의 buttons 데이터를 전달받아 v-for 디렉티브를 사용해 반복적으로 생성되는 자식 컴포넌트에 각각의 배열값을 바인딩.
+- 자식 컴포넌트 내부에서 버튼이 클릭되면 $emit() 메서드를 이용해 timeclick 이벤트를 발신.
+- 부모 컴포넌트에서는 v-on 디렉티브를 이용해 timeclick 이벤트를 처리하는것.
+- $emit()을 이용해 이벤트를 발신할 때 필요한 정보들을 인자로 전달할 수 있음.
+
