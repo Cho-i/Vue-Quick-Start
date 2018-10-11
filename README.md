@@ -3,13 +3,13 @@
 
 ## 02 Vue.js 기초
 
-## 03 Vue 인스턴스 - [Go](/03/)
+## 03 Vue 인스턴스 - [Go](/Vue-Quick-Start/03/)
 
-## 04 이벤트 처리 - [Go](/04/)
+## 04 이벤트 처리 - [Go](/Vue-Quick-Start/04/)
 
-## 05 스타일 - [Go](/05/)
+## 05 스타일 - [Go](/Vue-Quick-Start/05/)
 
-## 06 컴포넌트 기초 - [Go](/06/)
+## 06 컴포넌트 기초 - [Go](/Vue-Quick-Start/06/)
 
 ## 07 ECMAScript 2015
 

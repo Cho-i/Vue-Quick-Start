@@ -117,5 +117,5 @@ search-component에서 keyup 이벤트가 발생하면 search-contact-component�
 
 이벤트를 발신하는 컴포넌트에서는 $emit 메서드를 호출.
 
-
+[ex06-07.html](https://cho-i.github.io/Vue-Quick-Start/06/ex06-07.html)
 
