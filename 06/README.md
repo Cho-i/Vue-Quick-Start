@@ -97,4 +97,25 @@ event를 이용해서 전달하는 방법은 사용자 정의 이벤트를 활�
 - 자식 컴포넌트 내부에서 버튼이 클릭되면 $emit() 메서드를 이용해 timeclick 이벤트를 발신.
 - 부모 컴포넌트에서는 v-on 디렉티브를 이용해 timeclick 이벤트를 처리하는것.
 - $emit()을 이용해 이벤트를 발신할 때 필요한 정보들을 인자로 전달할 수 있음.
+- buttonInfo.text와 buttonInfo.value 두개의 인자는 부모 컴포넌트의 timeclickEvent 메서드의 k, v 인자로 전달되어 처리됨.
+
+### 6.5.3 props와 event 예제
+
+[ex06-06.html](https://cho-i.github.io/Vue-Quick-Start/06/ex06-06.html)
+
+search-contact-component 부모 컴포넌트 내부에 자식 컴포넌트로써 search-component와 contactlist-component가 포함된 구조. 부모와 자식 컴포넌트 사이에 props와 event로 상호작용하도록 작성.
+
+search-component에서 keyup 이벤트가 발생하면 search-contact-component로 이벤트를 발신. 이때 텍스트 박스에 입력된 문자열을 인자로 담아 부모 컴포넌트로 전달. 전달받은 데이터를 이용해 연락처 서비스API에 요청하여 이름이 포함된 연락처 목록을 받아옴.
+
+받아온 연락처 목록은 부모 컴포넌트의 내부 상태로서 contactlist 데이터 옵션에 저장되고, 이것을 contacts 속성(props)을 통해 contactlist-component 컴포넌트로 전달.
+
+## 6.6 이벤트 버스 객체를 이용한 통신
+
+부모-자식 관계의 컴포넌트들은 props와 events를 사용. 하지만 부모-자식 관계가 아닌 경우는 이벤트 버스(Event Bus) 객체를 만듦. 비어 있는 Vue 인스턴스를 만들어서 사용.
+
+이벤트를 수신하는 컴포넌트는 미리 이벤트 핸들러를 등록해두어야 함. Vue 인스턴스 생명주기의 created 이벤트 훅을 이용하여 Vue 인스턴스가 만들어질 때 $on 메서드를 사용해 이벤트 수신 정보를 등록. 
+
+이벤트를 발신하는 컴포넌트에서는 $emit 메서드를 호출.
+
+
 
