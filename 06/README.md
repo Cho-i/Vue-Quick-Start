@@ -119,3 +119,9 @@ search-component에서 keyup 이벤트가 발생하면 search-contact-component�
 
 [ex06-07.html](https://cho-i.github.io/Vue-Quick-Start/06/ex06-07.html)
 
+## 6.7 Todolist 실전 예제
+
+[ex06-08.html](https://cho-i.github.io/Vue-Quick-Start/06/ex06-08.html)
+
+
+
