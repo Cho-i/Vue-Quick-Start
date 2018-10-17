@@ -11,7 +11,7 @@
 
 ## 06 컴포넌트 기초 - [Go](/Vue-Quick-Start/06/)
 
-## 07 ECMAScript 2015
+## 07 ECMAScript 2015 - [Go](/Vue-Quick-Start/07/)
 
 ## 08 Webpack
 
