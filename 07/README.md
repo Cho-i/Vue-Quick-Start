@@ -254,7 +254,41 @@ console.log(e1.toString());
 console.log(Person.getPersonCount());
 ```
 
+Employee 클래스는 Person 클래스로부터 상속받음. 기존 클래스의 기능들을 상속받아 사용하고, getEmplnfo()와 같은 메서드를 추가하여 기능을 확장함.
 
+## 7.10 모듈
+
+모듈이란 독립성을 가진 재사용 가능한 코드 블록. 여러 개의 코드 블록을 각각의 파일로 분리한 후 필요한 모듈들을 조합해 애플리케이션을 개발할 수 있음. ES2015에서는 모듈을 JS코드를 포함하고 있는 파일이라고 간주해도 무방. 코드 블록 안에서 import, export 구문을 이용해서 모듈을 가져오거나 내보낼 수 있음. 모듈 내부에서 선언된 모든 변수, 함수, 객체, 클래스는 지역적인(local) 것으로 간주됨. 따라서 재사용 가능한 모듈을 만들려면 반드시 외부로 공개하고자 하는 것을 export해야 함. export된 모듈은 다른 모듈에서 import 구문으로 참조하여 사용할 수 있음. export할 수 있는 대상은 변수, 함수, 객체, 클래스 등이며 다음과 같이 export할 수 있음.
+
+```javascript
+export let a= 1000;
+export function f1(a){...}
+export {n1, n2 as othername, ...}
+```
+
+import할 때 주의 사항은 상대 경로를 사용함. 이름을 변경하고 싶다면 as 예약어를 사용.
+
+[utility1.js](https://cho-i.github.io/Vue-Quick-Start/07/src/utils/utility1.js)
+
+[ex07-10.js](https://cho-i.github.io/Vue-Quick-Start/07/src/ex07-10.js)
+
+모듈 단위에서 export하는 값이 여러 개인 경우를 위해서 {add, var1}과 같이 import했지만, 만일 export하는 값이 단일 값, 단일 객체, 단일 함수, 단일 클래스라면 default키워드를 이용해 export한 후 단일 값으로 import할 수 있음.
+
+[ex07-11.js](https://cho-i.github.io/Vue-Quick-Start/07/src/ex07-11.js)
+
+단일 객체를 export하기 위해 default를 사용함. 단일 객체이므로 import할 때 import{calc}from...와 같이 구조분해 할당을 사용하지 않고  import calc from.. 와 같이 단일 객체로 가져올 수 있음.
+
+## 7.11 Promise
+
+Promise 객체를 지원해 비동기 처리를 좀 더 깔끔하게 수행할 수 있음.
+
+[ex07-12.js](https://cho-i.github.io/Vue-Quick-Start/07/src/ex07-12.js)
+
+## 7.12 전개 연산자
+
+...연산자를 함수의 인자로 사용하면 가변 파라미터라고 함. 가변 파라미터는 개별 값을 나열하여 함수의 인자로 전달하면 함수의 내부에서 배열로 사용할 수 있도록 함.
+
+전개 연산자는 가변 파라미터와 사용 방법이 다름. 배열이나 객체를 ... 연산자와 함께 객체 리터럴, 배열 리터럴에서 사용하면 분해된 값으로 전달.
 
 
 
