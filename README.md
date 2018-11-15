@@ -13,7 +13,7 @@
 
 ## 07 ECMAScript 2015 - [Go](/Vue-Quick-Start/07/)
 
-## 08 Webpack
+## 08 Webpack - [Go](/Vue-Quick-Start/08/)
 
 ## 09 컴포넌트 심화
 
