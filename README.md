@@ -13,9 +13,9 @@
 
 ## 07 ECMAScript 2015 - [Go](/Vue-Quick-Start/07/)
 
-## 08 Webpack - [Go](/Webpack/)
+## 08 Webpack - [Go](/Vue-Quick-Start/08/)
 
-## 09 컴포넌트 심화
+## 09 컴포넌트 심화 - [Go](/Vue-Quick-Start/09/)
 
 ## 10 axios를 이용한 서버통신
 
